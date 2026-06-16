@@ -771,3 +771,96 @@ document.addEventListener("keydown", (e) => {
     });
   }
 });
+/* =======================================================
+   NETWORK MODAL
+======================================================= */
+
+const viewPartnersBtn = document.getElementById("viewPartnersBtn");
+
+const networkModal = document.getElementById("networkModal");
+
+const closeNetworkModal = document.getElementById("closeNetworkModal");
+
+if (viewPartnersBtn && networkModal) {
+  viewPartnersBtn.addEventListener("click", () => {
+    networkModal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+  });
+}
+
+if (closeNetworkModal && networkModal) {
+  closeNetworkModal.addEventListener("click", () => {
+    networkModal.classList.remove("show");
+
+    document.body.style.overflow = "auto";
+  });
+}
+
+/* =======================================================
+   OUTSIDE CLICK CLOSE
+======================================================= */
+
+networkModal?.addEventListener("click", (e) => {
+  if (e.target === networkModal) {
+    networkModal.classList.remove("show");
+
+    document.body.style.overflow = "auto";
+  }
+});
+
+/* =======================================================
+   ESC CLOSE
+======================================================= */
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && networkModal.classList.contains("show")) {
+    networkModal.classList.remove("show");
+
+    document.body.style.overflow = "auto";
+  }
+});
+
+/* =======================================================
+   TABS
+======================================================= */
+
+const tabs = document.querySelectorAll(".network-tab");
+
+const tabContents = document.querySelectorAll(".network-tab-content");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.tab;
+
+    tabs.forEach((t) => {
+      t.classList.remove("active");
+    });
+
+    tabContents.forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    tab.classList.add("active");
+
+    document.getElementById(target).classList.add("active");
+  });
+});
+
+/* =======================================================
+   SEARCH
+======================================================= */
+
+const partnerSearch = document.getElementById("partnerSearch");
+
+partnerSearch?.addEventListener("keyup", () => {
+  const searchText = partnerSearch.value.toLowerCase();
+
+  const partners = document.querySelectorAll(".partner-item");
+
+  partners.forEach((partner) => {
+    const text = partner.textContent.toLowerCase();
+
+    partner.style.display = text.includes(searchText) ? "block" : "none";
+  });
+});
