@@ -4208,22 +4208,29 @@ textarea:focus {
   visibility: visible;
 }
 
-.card-modal {
-  display: none;
+.card-modal{
 
-  width: 90%;
+    display:none;
 
-  max-width: 700px;
+    width:90%;
 
-  background: #fff;
+    max-width:700px;
 
-  padding: 40px;
+    max-height:85vh;
 
-  border-radius: 25px;
+    overflow-y:auto;
 
-  position: relative;
+    background:#fff;
 
-  animation: modalPop 0.3s ease;
+    padding:40px;
+
+    border-radius:25px;
+
+    position:relative;
+
+    animation:
+        modalPop .3s ease;
+
 }
 
 .card-modal.active {
@@ -4257,7 +4264,19 @@ textarea:focus {
 
   cursor: pointer;
 }
+@media(max-width:768px){
 
+    .card-modal{
+
+        width:95%;
+
+        max-height:80vh;
+
+        padding:25px;
+
+    }
+
+}
 @keyframes modalPop {
   from {
     transform: scale(0.8);
