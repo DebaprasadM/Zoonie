@@ -480,3 +480,294 @@ images.forEach((img) => {
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Zoonie Healthcare NGO Website Loaded Successfully");
 });
+
+/* =======================================================
+   GALLERY LIGHTBOX
+======================================================= */
+
+const galleryImages = document.querySelectorAll(".gallery-item img");
+
+const lightbox = document.createElement("div");
+
+lightbox.id = "lightbox";
+
+lightbox.innerHTML = `
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+`;
+
+document.body.appendChild(lightbox);
+
+const lightboxImg = document.getElementById("lightbox-img");
+
+const lightboxClose = document.getElementById("lightbox-close");
+
+galleryImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    lightbox.classList.add("show");
+
+    lightboxImg.src = img.src;
+  });
+});
+
+lightboxClose.addEventListener("click", () => {
+  lightbox.classList.remove("show");
+});
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove("show");
+  }
+});
+
+/* =======================================================
+   ESC CLOSE LIGHTBOX
+======================================================= */
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    lightbox.classList.remove("show");
+  }
+});
+
+/* =======================================================
+   TESTIMONIAL SWIPE SUPPORT
+======================================================= */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const testimonialSlider = document.querySelector(".testimonial-slider");
+
+if (testimonialSlider) {
+  testimonialSlider.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  testimonialSlider.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+
+    handleSwipe();
+  });
+}
+
+function handleSwipe() {
+  if (touchEndX < touchStartX - 50) {
+    nextSlide();
+  }
+
+  if (touchEndX > touchStartX + 50) {
+    prevSlide();
+  }
+}
+
+/* =======================================================
+   NAVIGATION SMOOTH ACTIVE EFFECT
+======================================================= */
+
+navItems.forEach((link) => {
+  link.addEventListener("mouseenter", () => {
+    link.style.transform = "translateX(6px)";
+  });
+
+  link.addEventListener("mouseleave", () => {
+    link.style.transform = "translateX(0)";
+  });
+});
+
+/* =======================================================
+   PAGE LOADED MESSAGE
+======================================================= */
+
+window.addEventListener("load", () => {
+  console.log("Premium NGO Features Loaded");
+});
+/* =======================================================
+   STAGGER REVEAL ANIMATION
+======================================================= */
+
+// const staggerItems = document.querySelectorAll(
+//   `
+//     .service-card,
+//     .impact-card,
+//     .why-card,
+//     .gallery-item,
+//     .mission-card,
+//     .highlight-card
+//     `,
+// );
+
+// staggerItems.forEach((item, index) => {
+//   item.style.transitionDelay = `${index * 0.08}s`;
+// });
+
+// /* =======================================================
+//    SMOOTH CARD HOVER TILT
+// ======================================================= */
+
+// const tiltCards = document.querySelectorAll(".service-card, .why-card");
+
+// tiltCards.forEach((card) => {
+//   card.addEventListener("mousemove", (e) => {
+//     const rect = card.getBoundingClientRect();
+
+//     const x = e.clientX - rect.left;
+
+//     const y = e.clientY - rect.top;
+
+//     const rotateY = (x / rect.width - 0.5) * 8;
+
+//     const rotateX = (y / rect.height - 0.5) * -8;
+
+//     card.style.transform = `perspective(1000px)
+//              rotateX(${rotateX}deg)
+//              rotateY(${rotateY}deg)
+//              translateY(-8px)`;
+//   });
+
+//   card.addEventListener("mouseleave", () => {
+//     card.style.transform = "perspective(1000px) rotateX(0) rotateY(0)";
+//   });
+// });
+
+// /* =======================================================
+//    HEADER COUNTER FORMATTER
+// ======================================================= */
+
+// function formatLargeNumber(num) {
+//   if (num >= 1000000) {
+//     return (num / 1000000).toFixed(1) + "M+";
+//   }
+
+//   if (num >= 1000) {
+//     return (num / 1000).toFixed(1) + "K+";
+//   }
+
+//   return num;
+// }
+
+// /* =======================================================
+//    IMAGE FADE IN AFTER LOAD
+// ======================================================= */
+
+// document.querySelectorAll("img").forEach((img) => {
+//   img.style.opacity = "0";
+
+//   img.addEventListener("load", () => {
+//     img.style.transition = "opacity .6s ease";
+
+//     img.style.opacity = "1";
+//   });
+// });
+
+// /* =======================================================
+//    SCROLL PROGRESS BAR
+// ======================================================= */
+
+// const progressBar = document.createElement("div");
+
+// progressBar.id = "scroll-progress";
+
+// document.body.appendChild(progressBar);
+
+// window.addEventListener("scroll", () => {
+//   const scrollTop = window.scrollY;
+
+//   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+//   const progress = (scrollTop / docHeight) * 100;
+
+//   progressBar.style.width = progress + "%";
+// });
+
+// /* =======================================================
+//    SMART BUTTON RIPPLE EFFECT
+// ======================================================= */
+
+// const buttons = document.querySelectorAll(".btn");
+
+// buttons.forEach((button) => {
+//   button.addEventListener("click", (e) => {
+//     const ripple = document.createElement("span");
+
+//     ripple.classList.add("ripple");
+
+//     const rect = button.getBoundingClientRect();
+
+//     ripple.style.left = e.clientX - rect.left + "px";
+
+//     ripple.style.top = e.clientY - rect.top + "px";
+
+//     button.appendChild(ripple);
+
+//     setTimeout(() => {
+//       ripple.remove();
+//     }, 600);
+//   });
+// });
+
+// /* =======================================================
+//    CONSOLE BRANDING
+// ======================================================= */
+
+// console.log(`
+// =========================================
+//  ZOONIE HEALTHCARE NGO
+//  Premium Frontend Loaded Successfully
+// =========================================
+// `);
+/* =======================================================
+   CARD MODALS
+======================================================= */
+
+const modalButtons = document.querySelectorAll(".details-btn");
+
+const modalOverlay = document.getElementById("modalOverlay");
+
+const modals = document.querySelectorAll(".card-modal");
+
+const closeButtons = document.querySelectorAll(".close-modal");
+
+modalButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const modalId = btn.dataset.modal;
+
+    modalOverlay.classList.add("show");
+
+    modals.forEach((modal) => {
+      modal.classList.remove("active");
+    });
+
+    document.getElementById(modalId).classList.add("active");
+  });
+});
+
+closeButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modalOverlay.classList.remove("show");
+
+    modals.forEach((modal) => {
+      modal.classList.remove("active");
+    });
+  });
+});
+
+modalOverlay.addEventListener("click", (e) => {
+  if (e.target === modalOverlay) {
+    modalOverlay.classList.remove("show");
+
+    modals.forEach((modal) => {
+      modal.classList.remove("active");
+    });
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    modalOverlay.classList.remove("show");
+
+    modals.forEach((modal) => {
+      modal.classList.remove("active");
+    });
+  }
+});

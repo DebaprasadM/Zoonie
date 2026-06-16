@@ -3814,3 +3814,460 @@ textarea:focus {
     padding: 70px 5%;
   }
 }
+/* LIGHTBOX */
+
+#lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.9);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 99999;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: 0.3s;
+}
+
+#lightbox.show {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+#lightbox img {
+  max-width: 90%;
+
+  max-height: 85vh;
+
+  border-radius: 15px;
+}
+
+#lightbox-close {
+  position: absolute;
+
+  top: 20px;
+
+  right: 30px;
+
+  color: #fff;
+
+  font-size: 40px;
+
+  cursor: pointer;
+}
+/* SCROLL PROGRESS */
+
+#scroll-progress {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  height: 4px;
+
+  width: 0;
+
+  background: var(--gradient);
+
+  z-index: 999999;
+}
+
+/* RIPPLE EFFECT */
+
+.btn {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  animation: rippleEffect 0.3s linear;
+}
+
+@keyframes rippleEffect {
+  from {
+    width: 0;
+    height: 0;
+
+    opacity: 1;
+  }
+
+  to {
+    width: 300px;
+    height: 300px;
+
+    opacity: 0;
+  }
+}
+/* =======================================================
+   HEALTH CARDS SECTION
+======================================================= */
+
+.health-cards {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+}
+
+/* =======================================================
+   CARD GRID
+======================================================= */
+
+.cards-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 35px;
+
+  margin-top: 50px;
+}
+
+/* =======================================================
+   CARD BASE
+======================================================= */
+
+.membership-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  padding: 40px;
+
+  color: #fff;
+
+  transition: 0.4s ease;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.membership-card:hover {
+  transform: translateY(-15px);
+}
+
+/* =======================================================
+   CARD TITLE
+======================================================= */
+
+.membership-card h3 {
+  font-size: 2rem;
+
+  margin-bottom: 15px;
+
+  font-weight: 800;
+}
+
+.price {
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  margin-bottom: 25px;
+}
+
+/* =======================================================
+   FEATURES
+======================================================= */
+
+.membership-card ul {
+  margin-bottom: 30px;
+}
+
+.membership-card ul li {
+  padding: 10px 0;
+
+  font-size: 1rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* =======================================================
+   BUTTON
+======================================================= */
+
+.details-btn {
+  padding: 14px 28px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.details-btn:hover {
+  transform: scale(1.05);
+}
+
+/* =======================================================
+   PLATINUM
+======================================================= */
+
+.platinum {
+  background: linear-gradient(135deg, #0f4c81, #08345a);
+}
+
+.platinum .details-btn {
+  color: #0f4c81;
+}
+
+/* =======================================================
+   PREMIUM
+======================================================= */
+
+.premium {
+  background: linear-gradient(135deg, #2e8b57, #1e6e42);
+}
+
+.premium .details-btn {
+  color: #2e8b57;
+}
+
+/* =======================================================
+   PRAGATHI
+======================================================= */
+
+.pragathi {
+  background: linear-gradient(135deg, #c2185b, #8e1042);
+}
+
+.pragathi .details-btn {
+  color: #c2185b;
+}
+
+/* =======================================================
+   CREDIT
+======================================================= */
+
+.credit {
+  background: linear-gradient(135deg, #6a1b9a, #4a126d);
+}
+
+.credit .details-btn {
+  color: #6a1b9a;
+}
+
+/* =======================================================
+   SHINE EFFECT
+======================================================= */
+
+.membership-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -100%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.membership-card:hover::before {
+  left: 100%;
+}
+
+/* =======================================================
+   DECORATIVE CIRCLE
+======================================================= */
+
+.membership-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  top: -60px;
+
+  right: -60px;
+}
+
+/* =======================================================
+   MOST POPULAR BADGE
+======================================================= */
+
+.popular-badge {
+  position: absolute;
+
+  top: 20px;
+
+  right: -35px;
+
+  padding: 10px 50px;
+
+  background: #f4b400;
+
+  color: #111;
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
+
+  transform: rotate(45deg);
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media (max-width: 992px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .membership-card {
+    padding: 30px;
+  }
+
+  .membership-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .price {
+    font-size: 1.6rem;
+  }
+}
+/* =======================================================
+   MODAL SYSTEM
+======================================================= */
+
+.modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 99999;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: 0.3s;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+.card-modal {
+  display: none;
+
+  width: 90%;
+
+  max-width: 700px;
+
+  background: #fff;
+
+  padding: 40px;
+
+  border-radius: 25px;
+
+  position: relative;
+
+  animation: modalPop 0.3s ease;
+}
+
+.card-modal.active {
+  display: block;
+}
+
+.card-modal h2 {
+  color: #0f4c81;
+
+  margin-bottom: 20px;
+}
+
+.card-modal p {
+  margin-bottom: 20px;
+
+  line-height: 1.8;
+}
+
+.card-modal ul li {
+  margin-bottom: 10px;
+}
+
+.close-modal {
+  position: absolute;
+
+  top: 15px;
+
+  right: 20px;
+
+  font-size: 35px;
+
+  cursor: pointer;
+}
+
+@keyframes modalPop {
+  from {
+    transform: scale(0.8);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
