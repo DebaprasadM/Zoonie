@@ -418,8 +418,6 @@ button {
   z-index: 1000;
 
   box-shadow: 5px 0 30px rgba(0, 0, 0, 0.05);
-
-  
 }
 
 /* =======================================================
@@ -453,26 +451,20 @@ button {
 ======================================================= */
 
 .sidebar-nav {
+  margin-top: 40px;
 
-    margin-top:40px;
+  flex: 1;
 
-    flex:1;
+  overflow-y: auto;
 
-    overflow-y:auto;
+  scrollbar-width: none;
 
-    scrollbar-width:none;
-
-    -ms-overflow-style:none;
-
+  -ms-overflow-style: none;
 }
 
-.sidebar-nav::-webkit-scrollbar{
-
-    display:none;
-
+.sidebar-nav::-webkit-scrollbar {
+  display: none;
 }
-
-
 
 .sidebar-nav ul {
   display: flex;
@@ -4832,304 +4824,299 @@ textarea:focus {
     flex-direction: column;
   }
 }
-@media(max-width:992px){
+@media (max-width: 992px) {
+  .sidebar {
+    overflow-y: auto;
 
-    .sidebar{
-
-        overflow-y:auto;
-
-        -webkit-overflow-scrolling:touch;
-
-    }
-
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
-.future-network-grid{
+.future-network-grid {
+  display: grid;
 
-    display:grid;
+  grid-template-columns: repeat(4, 1fr);
 
-    grid-template-columns:repeat(4,1fr);
+  gap: 25px;
 
-    gap:25px;
-
-    margin-top:60px;
-
+  margin-top: 60px;
 }
-@media (max-width:768px){
-
-    .future-network-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
+@media (max-width: 768px) {
+  .future-network-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.future-card{
+.future-card {
+  background: #fff;
 
-    background:#fff;
+  padding: 35px;
 
-    padding:35px;
+  text-align: center;
 
-    text-align:center;
+  border-radius: 25px;
 
-    border-radius:25px;
+  box-shadow: var(--shadow-sm);
 
-    box-shadow:var(--shadow-sm);
-
-    transition:.3s;
-
+  transition: 0.3s;
 }
 
-.future-card:hover{
+.future-card:hover {
+  transform: translateY(-10px);
 
-    transform:translateY(-10px);
-
-    box-shadow:var(--shadow-lg);
-
+  box-shadow: var(--shadow-lg);
 }
 
-.future-card i{
+.future-card i {
+  font-size: 3rem;
 
-    font-size:3rem;
+  color: var(--primary);
 
-    color:var(--primary);
-
-    margin-bottom:20px;
-
+  margin-bottom: 20px;
 }
 
-.future-card h3{
+.future-card h3 {
+  font-size: 2.5rem;
 
-    font-size:2.5rem;
+  color: var(--primary);
 
-    color:var(--primary);
+  margin-bottom: 10px;
 
-    margin-bottom:10px;
-
-    font-weight:800;
-
+  font-weight: 800;
 }
 
-.future-network-note{
+.future-network-note {
+  margin-top: 50px;
 
-    margin-top:50px;
+  padding: 35px;
 
-    padding:35px;
+  border-radius: 25px;
 
-    border-radius:25px;
+  background: var(--gradient);
 
-    background:var(--gradient);
-
-    color:#fff;
-
+  color: #fff;
 }
 
-.future-network-note ul{
-
-    margin-top:20px;
-
+.future-network-note ul {
+  margin-top: 20px;
 }
 
-.future-network-note li{
-
-    margin-bottom:15px;
-
+.future-network-note li {
+  margin-bottom: 15px;
 }
 
 /* ===================================
    APP DOWNLOAD SECTION
 =================================== */
 
-.app-download-section{
-
-    margin-top:80px;
-
+.app-download-section {
+  margin-top: 80px;
 }
 
-.app-download-content{
+.app-download-content {
+  text-align: center;
 
-    text-align:center;
+  padding: 70px 40px;
 
-    padding:70px 40px;
+  border-radius: 35px;
 
-    border-radius:35px;
+  background: var(--gradient);
 
-    background:var(--gradient);
+  color: #fff;
 
-    color:#fff;
+  box-shadow: var(--shadow-lg);
 
-    box-shadow:var(--shadow-lg);
+  position: relative;
 
-    position:relative;
-
-    overflow:hidden;
-
+  overflow: hidden;
 }
 
-.app-download-content::before{
+.app-download-content::before {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  width: 250px;
+  height: 250px;
 
-    width:250px;
-    height:250px;
+  border-radius: 50%;
 
-    border-radius:50%;
+  background: rgba(255, 255, 255, 0.08);
 
-    background:rgba(255,255,255,.08);
-
-    top:-120px;
-    right:-80px;
-
+  top: -120px;
+  right: -80px;
 }
 
-.app-download-content::after{
+.app-download-content::after {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  width: 180px;
+  height: 180px;
 
-    width:180px;
-    height:180px;
+  border-radius: 50%;
 
-    border-radius:50%;
+  background: rgba(255, 255, 255, 0.08);
 
-    background:rgba(255,255,255,.08);
-
-    left:-50px;
-    bottom:-50px;
-
+  left: -50px;
+  bottom: -50px;
 }
 
-.app-download-content h2{
+.app-download-content h2 {
+  font-size: 3rem;
 
-    font-size:3rem;
+  margin: 20px 0;
 
-    margin:20px 0;
-
-    font-weight:800;
-
+  font-weight: 800;
 }
 
-.app-download-content p{
+.app-download-content p {
+  max-width: 750px;
 
-    max-width:750px;
+  margin: 0 auto 40px;
 
-    margin:0 auto 40px;
-
-    opacity:.95;
-
+  opacity: 0.95;
 }
 
-.app-buttons{
+.app-buttons {
+  display: flex;
 
-    display:flex;
+  justify-content: center;
 
-    justify-content:center;
+  gap: 20px;
 
-    gap:20px;
-
-    flex-wrap:wrap;
-
+  flex-wrap: wrap;
 }
 
 /* ===================================
    APP BUTTON
 =================================== */
 
-.app-btn{
+.app-btn {
+  display: flex;
 
-    display:flex;
+  align-items: center;
 
-    align-items:center;
+  gap: 15px;
 
-    gap:15px;
+  background: #000;
 
-    background:#000;
+  color: #fff;
 
-    color:#fff;
+  padding: 16px 28px;
 
-    padding:16px 28px;
+  border-radius: 18px;
 
-    border-radius:18px;
+  transition: 0.3s;
 
-    transition:.3s;
-
-    min-width:220px;
-
+  min-width: 220px;
 }
 
-.app-btn:hover{
-
-    transform:translateY(-5px);
-
+.app-btn:hover {
+  transform: translateY(-5px);
 }
 
-.app-btn i{
-
-    font-size:2.3rem;
-
+.app-btn i {
+  font-size: 2.3rem;
 }
 
-.app-btn small{
+.app-btn small {
+  display: block;
 
-    display:block;
+  font-size: 0.75rem;
 
-    font-size:.75rem;
-
-    opacity:.8;
-
+  opacity: 0.8;
 }
 
-.app-btn span{
+.app-btn span {
+  font-size: 1.15rem;
 
-    font-size:1.15rem;
-
-    font-weight:700;
-
+  font-weight: 700;
 }
 
 /* Android */
 
-.android-btn{
-
-    background:#111827;
-
+.android-btn {
+  background: #111827;
 }
 
 /* iOS */
 
-.ios-btn{
-
-    background:#000;
-
+.ios-btn {
+  background: #000;
 }
 
 /* ===================================
    MOBILE
 =================================== */
 
+@media (max-width: 768px) {
+  .app-download-content {
+    padding: 50px 25px;
+  }
+
+  .app-download-content h2 {
+    font-size: 2rem;
+  }
+
+  .app-buttons {
+    flex-direction: column;
+
+    align-items: center;
+  }
+}
+
+.video-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.video-card{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.video-card iframe{
+
+    width:100%;
+
+    height:350px;
+
+    border:none;
+
+    display:block;
+
+}
+.video-gallery{
+
+    padding:20px 3%;
+
+    background:#fff;
+
+}
+
 @media(max-width:768px){
 
-    .app-download-content{
+    .video-grid{
 
-        padding:50px 25px;
-
-    }
-
-    .app-download-content h2{
-
-        font-size:2rem;
+        grid-template-columns:1fr;
 
     }
 
-    .app-buttons{
+    .video-card iframe{
 
-        flex-direction:column;
-
-        align-items:center;
+        height:250px;
 
     }
 
