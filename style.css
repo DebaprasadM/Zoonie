@@ -47,7 +47,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -141,7 +141,7 @@ button {
 ======================================================= */
 
 .main-content {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* =======================================================
@@ -5120,4 +5120,23 @@ textarea:focus {
 
     }
 
+}
+.contact-link {
+  display: block;
+  color: var(--text-light);
+  word-break: break-all;
+}
+
+
+.map-embed{
+    overflow:hidden;
+    border-radius:30px;
+    box-shadow:var(--shadow-md);
+}
+
+.map-embed iframe{
+    display:block;
+    width:100%;
+    height:450px;
+    border:none;
 }
