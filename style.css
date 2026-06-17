@@ -424,8 +424,9 @@ button {
    LOGO
 ======================================================= */
 
-.logo {
-  text-align: center;
+.logo{
+     display: flex;
+    justify-content: flex-end;
 }
 
 .logo h2 {
@@ -435,7 +436,7 @@ button {
 
   color: var(--primary);
 
-  margin-bottom: 4px;
+  margin-bottom: 1px;
 }
 
 .logo span {
@@ -451,7 +452,7 @@ button {
 ======================================================= */
 
 .sidebar-nav {
-  margin-top: 40px;
+  margin-top: 5px;
 
   flex: 1;
 
@@ -5139,4 +5140,53 @@ textarea:focus {
     width:100%;
     height:450px;
     border:none;
+}
+
+.logo{
+     display: flex;
+    justify-content: flex-end;
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 4px solid #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.loader-logo{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.loader-logo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.loader-circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 120px;
+    height: 120px;
+
+    border: 5px solid rgba(15,76,129,0.15);
+    border-top: 5px solid var(--primary);
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
 }
