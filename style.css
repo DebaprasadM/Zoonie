@@ -418,6 +418,8 @@ button {
   z-index: 1000;
 
   box-shadow: 5px 0 30px rgba(0, 0, 0, 0.05);
+
+  
 }
 
 /* =======================================================
@@ -451,8 +453,26 @@ button {
 ======================================================= */
 
 .sidebar-nav {
-  margin-top: 40px;
+
+    margin-top:40px;
+
+    flex:1;
+
+    overflow-y:auto;
+
+    scrollbar-width:none;
+
+    -ms-overflow-style:none;
+
 }
+
+.sidebar-nav::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
 
 .sidebar-nav ul {
   display: flex;
@@ -4747,4 +4767,370 @@ textarea:focus {
   color: var(--primary);
 
   margin-bottom: 15px;
+}
+.card-info-box {
+  margin-top: 40px;
+
+  display: flex;
+
+  gap: 20px;
+
+  align-items: flex-start;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  border-left: 5px solid #0f4c81;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.card-info-icon {
+  width: 65px;
+  height: 65px;
+
+  min-width: 65px;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #0f4c81, #2e8b57);
+
+  color: #fff;
+
+  font-size: 1.5rem;
+}
+
+.card-info-content h3 {
+  margin-bottom: 10px;
+
+  color: #0f4c81;
+}
+
+.card-info-content p {
+  color: #64748b;
+
+  line-height: 1.8;
+}
+.info-note {
+  margin-top: 15px;
+
+  font-size: 0.9rem;
+
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .card-info-box {
+    flex-direction: column;
+  }
+}
+@media(max-width:992px){
+
+    .sidebar{
+
+        overflow-y:auto;
+
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+}
+
+.future-network-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-top:60px;
+
+}
+@media (max-width:768px){
+
+    .future-network-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+.future-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.3s;
+
+}
+
+.future-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.future-card i{
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.future-card h3{
+
+    font-size:2.5rem;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+    font-weight:800;
+
+}
+
+.future-network-note{
+
+    margin-top:50px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:var(--gradient);
+
+    color:#fff;
+
+}
+
+.future-network-note ul{
+
+    margin-top:20px;
+
+}
+
+.future-network-note li{
+
+    margin-bottom:15px;
+
+}
+
+/* ===================================
+   APP DOWNLOAD SECTION
+=================================== */
+
+.app-download-section{
+
+    margin-top:80px;
+
+}
+
+.app-download-content{
+
+    text-align:center;
+
+    padding:70px 40px;
+
+    border-radius:35px;
+
+    background:var(--gradient);
+
+    color:#fff;
+
+    box-shadow:var(--shadow-lg);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.app-download-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-120px;
+    right:-80px;
+
+}
+
+.app-download-content::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    left:-50px;
+    bottom:-50px;
+
+}
+
+.app-download-content h2{
+
+    font-size:3rem;
+
+    margin:20px 0;
+
+    font-weight:800;
+
+}
+
+.app-download-content p{
+
+    max-width:750px;
+
+    margin:0 auto 40px;
+
+    opacity:.95;
+
+}
+
+.app-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ===================================
+   APP BUTTON
+=================================== */
+
+.app-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:#000;
+
+    color:#fff;
+
+    padding:16px 28px;
+
+    border-radius:18px;
+
+    transition:.3s;
+
+    min-width:220px;
+
+}
+
+.app-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.app-btn i{
+
+    font-size:2.3rem;
+
+}
+
+.app-btn small{
+
+    display:block;
+
+    font-size:.75rem;
+
+    opacity:.8;
+
+}
+
+.app-btn span{
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+}
+
+/* Android */
+
+.android-btn{
+
+    background:#111827;
+
+}
+
+/* iOS */
+
+.ios-btn{
+
+    background:#000;
+
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .app-download-content{
+
+        padding:50px 25px;
+
+    }
+
+    .app-download-content h2{
+
+        font-size:2rem;
+
+    }
+
+    .app-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
 }
