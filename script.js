@@ -171,114 +171,44 @@ window.addEventListener("load", () => {
 ======================================================= */
 
 const testimonials = document.querySelectorAll(".testimonial-card");
-
 const dots = document.querySelectorAll(".dot");
-
 const nextBtn = document.querySelector(".next-btn");
-
 const prevBtn = document.querySelector(".prev-btn");
 
 let currentSlide = 0;
 
-/* =======================================================
-   SHOW SLIDE
-======================================================= */
-
 function showSlide(index) {
-  testimonials.forEach((card) => {
-    card.classList.remove("active");
+  if (!testimonials.length) return;
+
+  testimonials.forEach((card, i) => {
+    card.style.display = i === index ? "block" : "none";
+    card.classList.toggle("active", i === index);
   });
 
-  dots.forEach((dot) => {
-    dot.classList.remove("active");
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
   });
-
-  testimonials[index].classList.add("active");
-
-  dots[index].classList.add("active");
 }
-
-/* =======================================================
-   NEXT SLIDE
-======================================================= */
 
 function nextSlide() {
-  currentSlide++;
-
-  if (currentSlide >= testimonials.length) {
-    currentSlide = 0;
-  }
-
+  currentSlide = (currentSlide + 1) % testimonials.length;
   showSlide(currentSlide);
 }
-
-/* =======================================================
-   PREVIOUS SLIDE
-======================================================= */
 
 function prevSlide() {
-  currentSlide--;
-
-  if (currentSlide < 0) {
-    currentSlide = testimonials.length - 1;
-  }
-
+  currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
   showSlide(currentSlide);
 }
 
-/* =======================================================
-   BUTTON EVENTS
-======================================================= */
-
-if (nextBtn) {
-  nextBtn.addEventListener("click", () => {
-    nextSlide();
-  });
-}
-
-if (prevBtn) {
-  prevBtn.addEventListener("click", () => {
-    prevSlide();
-  });
-}
-
-/* =======================================================
-   DOT EVENTS
-======================================================= */
+nextBtn?.addEventListener("click", nextSlide);
+prevBtn?.addEventListener("click", prevSlide);
 
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     currentSlide = index;
-
     showSlide(currentSlide);
   });
 });
-
-/* =======================================================
-   AUTO SLIDE
-======================================================= */
-
-let sliderInterval = setInterval(nextSlide, 5000);
-
-/* =======================================================
-   PAUSE ON HOVER
-======================================================= */
-
-const slider = document.querySelector(".testimonial-slider");
-
-if (slider) {
-  slider.addEventListener("mouseenter", () => {
-    clearInterval(sliderInterval);
-  });
-
-  slider.addEventListener("mouseleave", () => {
-    sliderInterval = setInterval(nextSlide, 5000);
-  });
-}
-
-/* =======================================================
-   INITIAL LOAD
-======================================================= */
 
 if (testimonials.length > 0) {
   showSlide(currentSlide);
