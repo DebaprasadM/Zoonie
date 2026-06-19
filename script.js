@@ -794,3 +794,18 @@ partnerSearch?.addEventListener("keyup", () => {
     partner.style.display = text.includes(searchText) ? "block" : "none";
   });
 });
+const toggleBtn = document.getElementById("toggleDistricts");
+
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    const hidden = document.querySelectorAll(".hidden-chip");
+
+    hidden.forEach((item) => {
+      item.classList.toggle("show-chip");
+    });
+
+    const opened = toggleBtn.innerText === "Hide Districts";
+
+    toggleBtn.innerText = opened ? "View All Districts" : "Hide Districts";
+  });
+}

@@ -5198,3 +5198,68 @@ textarea:focus {
   font-weight: 600;
   color: #555;
 }
+.covered-districts{
+    background:#f8fbff;
+}
+
+.district-grid{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+
+    margin-top:45px;
+
+}
+
+.district-chip{
+
+    background:#fff;
+
+    border:1px solid #d8e5f4;
+
+    border-radius:50px;
+
+    padding:12px 22px;
+
+    font-weight:600;
+
+    color:#0F172A;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.district-chip:hover{
+
+    background:#0F172A;
+
+    color:#fff;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+.hidden-chip{
+
+    display:none;
+
+}
+
+.district-btn{
+
+    text-align:center;
+
+    margin-top:45px;
+
+}
+.show-chip{
+
+    display:inline-flex !important;
+
+}
