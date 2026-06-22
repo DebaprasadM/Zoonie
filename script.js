@@ -809,3 +809,49 @@ if (toggleBtn) {
     toggleBtn.innerText = opened ? "View All Districts" : "Hide Districts";
   });
 }
+
+
+const loadBtn = document.getElementById("loadMoreGallery");
+
+if(loadBtn){
+
+    let visible = 0;
+
+    loadBtn.addEventListener("click",()=>{
+
+        const hiddenPhotos = document.querySelectorAll(".hidden-gallery:not(.show-gallery)");
+
+        for(let i=0;i<8 && i<hiddenPhotos.length;i++){
+
+            hiddenPhotos[i].classList.add("show-gallery");
+
+        }
+
+        if(document.querySelectorAll(".hidden-gallery:not(.show-gallery)").length===0){
+
+            loadBtn.style.display="none";
+
+        }
+
+    });
+
+}
+
+
+const districtCard = document.getElementById("districtCard");
+const districtModal = document.getElementById("districtModal");
+const closeDistrictModal = document.getElementById("closeDistrictModal");
+
+districtCard.addEventListener("click", () => {
+    districtModal.classList.add("active");
+});
+
+closeDistrictModal.addEventListener("click", () => {
+    districtModal.classList.remove("active");
+});
+
+districtModal.addEventListener("click", (e) => {
+    if (e.target === districtModal) {
+        districtModal.classList.remove("active");
+    }
+});

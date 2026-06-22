@@ -112,12 +112,12 @@
 
         <div class="sidebar-top">
 
-            <div class="logo">
+            <div class="logo-big">
 
                 <!-- Future Logo -->
 
                 <!-- <img src="assets/logo.png" alt="Zoonie Logo"> -->
-<img src="assets/zoonielogo.jpeg" alt="Zoonie Healthcare">
+<img src="assets/zoonielogobig.jpeg" alt="Zoonie Healthcare">
                 <!-- <h2>Zoonie</h2> -->
 
                 
@@ -803,14 +803,7 @@ The primary objective behind the establishment of Zoonie is to make quality heal
         </h3>
 
         <p>
-            Zoonie Cards are designed to complement existing healthcare
-            programs and insurance policies. While certain healthcare
-            schemes may focus on hospitalization benefits, eligible
-            members can also access additional healthcare-related
-            support through the Zoonie healthcare network for services
-            such as consultations, diagnostics, medicines, and other
-            healthcare needs, subject to applicable terms, eligibility,
-            and partner guidelines.
+            Zoonie Platinum Card can be applicable even with Ayushman Card or any Health Insurance Policy/Cards because may be Ayushman Card or any Insurance Policy they doesn't consider any payment against OPD Fee, Medicines, Consumables  or diagnostic bills. So who will pay these bills or bear the expenses? Naturally the patient.... But if they attach Zoonie Platinum Cards with the above Card or Policy definitely all the facilities/discounts will be applied (as per norm).
         </p>
         <p class="info-note">
 
@@ -1022,21 +1015,21 @@ The primary objective behind the establishment of Zoonie is to make quality heal
 
         </div>
 
-        <div class="impact-card">
+        <div class="impact-card district-card" id="districtCard">
 
-            <div class="impact-icon">
-                <i class="fas fa-map-location-dot"></i>
-            </div>
+    <div class="impact-icon">
+        <i class="fas fa-map-location-dot"></i>
+    </div>
 
-            <h3 class="counter" data-target="75">
-                0
-            </h3>
+    <h3 class="counter" data-target="75">0</h3>
 
-            <p>
-                Districts Covered
-            </p>
+    <p>Districts Covered</p>
 
-        </div>
+    <span class="view-districts">
+        Click to View
+    </span>
+
+</div>
 
         <div class="impact-card">
 
@@ -1059,126 +1052,111 @@ The primary objective behind the establishment of Zoonie is to make quality heal
 </section>
 
 <!-- ==================================
+     DISTRICTS MODAL
+================================== -->
+
+<div id="districtModal" class="district-modal">
+
+    <div class="district-modal-content">
+
+        <span id="closeDistrictModal">&times;</span>
+
+        <h2>Covered Districts</h2>
+
+        <p>
+            Zoonie Healthcare Network currently serves across
+            Uttar Pradesh.
+        </p>
+
+        <div class="district-grid">
+
+            <span>Agra</span>
+            <span>Aligarh</span>
+            <span>Ambedkar Nagar</span>
+            <span>Amethi</span>
+            <span>Amroha</span>
+            <span>Auraiya</span>
+            <span>Ayodhya</span>
+            <span>Azamgarh</span>
+            <span>Baghpat</span>
+            <span>Bahraich</span>
+            <span>Ballia</span>
+            <span>Balrampur</span>
+            <span>Banda</span>
+            <span>Barabanki</span>
+            <span>Bareilly</span>
+            <span>Basti</span>
+            <span>Bhadohi</span>
+            <span>Bijnor</span>
+            <span>Budaun</span>
+            <span>Bulandshahr</span>
+            <span>Chandauli</span>
+            <span>Chitrakoot</span>
+            <span>Deoria</span>
+            <span>Etah</span>
+            <span>Etawah</span>
+            <span>Farrukhabad</span>
+            <span>Fatehpur</span>
+            <span>Firozabad</span>
+            <span>Gautam Buddha Nagar</span>
+            <span>Ghaziabad</span>
+            <span>Ghazipur</span>
+            <span>Gonda</span>
+            <span>Gorakhpur</span>
+            <span>Hamirpur</span>
+            <span>Hapur</span>
+            <span>Hardoi</span>
+            <span>Hathras</span>
+            <span>Jalaun</span>
+            <span>Jaunpur</span>
+            <span>Jhansi</span>
+            <span>Kannauj</span>
+            <span>Kanpur Dehat</span>
+            <span>Kanpur Nagar</span>
+            <span>Kasganj</span>
+            <span>Kaushambi</span>
+            <span>Kushinagar</span>
+            <span>Lakhimpur Kheri</span>
+            <span>Lalitpur</span>
+            <span>Lucknow</span>
+            <span>Maharajganj</span>
+            <span>Mahoba</span>
+            <span>Mainpuri</span>
+            <span>Mathura</span>
+            <span>Mau</span>
+            <span>Meerut</span>
+            <span>Mirzapur</span>
+            <span>Moradabad</span>
+            <span>Muzaffarnagar</span>
+            <span>Pilibhit</span>
+            <span>Pratapgarh</span>
+            <span>Prayagraj</span>
+            <span>Raebareli</span>
+            <span>Rampur</span>
+            <span>Saharanpur</span>
+            <span>Sambhal</span>
+            <span>Sant Kabir Nagar</span>
+            <span>Shahjahanpur</span>
+            <span>Shamli</span>
+            <span>Shravasti</span>
+            <span>Siddharthnagar</span>
+            <span>Sitapur</span>
+            <span>Sonbhadra</span>
+            <span>Sultanpur</span>
+            <span>Unnao</span>
+            <span>Varanasi</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==================================
      COVERED DISTRICTS
 ================================== -->
 
-<section id="districts" class="covered-districts section">
 
-    <div class="section-header">
-
-        <span class="section-tag">
-            Covered Districts
-        </span>
-
-        <h2>
-            Serving Communities Across Uttar Pradesh
-        </h2>
-
-        <p>
-            Zoonie is committed to expanding quality healthcare
-            services across every district of Uttar Pradesh through
-            health camps, telemedicine, awareness programs and
-            community healthcare initiatives.
-        </p>
-
-    </div>
-
-    <div class="district-grid" id="districtGrid">
-
-        <!-- Initially Visible -->
-
-        <span class="district-chip">Prayagraj</span>
-        <span class="district-chip">Lucknow</span>
-        <span class="district-chip">Varanasi</span>
-        <span class="district-chip">Kanpur Nagar</span>
-        <span class="district-chip">Agra</span>
-        <span class="district-chip">Gorakhpur</span>
-
-        <!-- Hidden -->
-
-        <span class="district-chip hidden-chip">Aligarh</span>
-        <span class="district-chip hidden-chip">Ambedkar Nagar</span>
-        <span class="district-chip hidden-chip">Amethi</span>
-        <span class="district-chip hidden-chip">Amroha</span>
-        <span class="district-chip hidden-chip">Auraiya</span>
-        <span class="district-chip hidden-chip">Ayodhya</span>
-        <span class="district-chip hidden-chip">Azamgarh</span>
-        <span class="district-chip hidden-chip">Baghpat</span>
-        <span class="district-chip hidden-chip">Bahraich</span>
-        <span class="district-chip hidden-chip">Ballia</span>
-        <span class="district-chip hidden-chip">Balrampur</span>
-        <span class="district-chip hidden-chip">Banda</span>
-        <span class="district-chip hidden-chip">Barabanki</span>
-        <span class="district-chip hidden-chip">Bareilly</span>
-        <span class="district-chip hidden-chip">Basti</span>
-        <span class="district-chip hidden-chip">Bhadohi</span>
-        <span class="district-chip hidden-chip">Bijnor</span>
-        <span class="district-chip hidden-chip">Budaun</span>
-        <span class="district-chip hidden-chip">Bulandshahr</span>
-        <span class="district-chip hidden-chip">Chandauli</span>
-        <span class="district-chip hidden-chip">Chitrakoot</span>
-        <span class="district-chip hidden-chip">Deoria</span>
-        <span class="district-chip hidden-chip">Etah</span>
-        <span class="district-chip hidden-chip">Etawah</span>
-        <span class="district-chip hidden-chip">Farrukhabad</span>
-        <span class="district-chip hidden-chip">Fatehpur</span>
-        <span class="district-chip hidden-chip">Firozabad</span>
-        <span class="district-chip hidden-chip">Gautam Buddha Nagar</span>
-        <span class="district-chip hidden-chip">Ghaziabad</span>
-        <span class="district-chip hidden-chip">Ghazipur</span>
-        <span class="district-chip hidden-chip">Gonda</span>
-        <span class="district-chip hidden-chip">Hamirpur</span>
-        <span class="district-chip hidden-chip">Hapur</span>
-        <span class="district-chip hidden-chip">Hardoi</span>
-        <span class="district-chip hidden-chip">Hathras</span>
-        <span class="district-chip hidden-chip">Jalaun</span>
-        <span class="district-chip hidden-chip">Jaunpur</span>
-        <span class="district-chip hidden-chip">Jhansi</span>
-        <span class="district-chip hidden-chip">Kannauj</span>
-        <span class="district-chip hidden-chip">Kanpur Dehat</span>
-        <span class="district-chip hidden-chip">Kasganj</span>
-        <span class="district-chip hidden-chip">Kaushambi</span>
-        <span class="district-chip hidden-chip">Kushinagar</span>
-        <span class="district-chip hidden-chip">Lakhimpur Kheri</span>
-        <span class="district-chip hidden-chip">Lalitpur</span>
-        <span class="district-chip hidden-chip">Maharajganj</span>
-        <span class="district-chip hidden-chip">Mahoba</span>
-        <span class="district-chip hidden-chip">Mainpuri</span>
-        <span class="district-chip hidden-chip">Mathura</span>
-        <span class="district-chip hidden-chip">Mau</span>
-        <span class="district-chip hidden-chip">Meerut</span>
-        <span class="district-chip hidden-chip">Mirzapur</span>
-        <span class="district-chip hidden-chip">Moradabad</span>
-        <span class="district-chip hidden-chip">Muzaffarnagar</span>
-        <span class="district-chip hidden-chip">Pilibhit</span>
-        <span class="district-chip hidden-chip">Pratapgarh</span>
-        <span class="district-chip hidden-chip">Raebareli</span>
-        <span class="district-chip hidden-chip">Rampur</span>
-        <span class="district-chip hidden-chip">Saharanpur</span>
-        <span class="district-chip hidden-chip">Sambhal</span>
-        <span class="district-chip hidden-chip">Sant Kabir Nagar</span>
-        <span class="district-chip hidden-chip">Shahjahanpur</span>
-        <span class="district-chip hidden-chip">Shamli</span>
-        <span class="district-chip hidden-chip">Shrawasti</span>
-        <span class="district-chip hidden-chip">Siddharthnagar</span>
-        <span class="district-chip hidden-chip">Sitapur</span>
-        <span class="district-chip hidden-chip">Sonbhadra</span>
-        <span class="district-chip hidden-chip">Sultanpur</span>
-        <span class="district-chip hidden-chip">Unnao</span>
-
-    </div>
-
-    <div class="district-btn">
-
-        <button id="toggleDistricts" class="btn primary-btn">
-
-            View All Districts
-
-        </button>
-
-    </div>
-
-</section>
 
 
 
@@ -1840,7 +1818,6 @@ decoding="async">
 <!-- ==================================
      GALLERY SECTION
 ================================== -->
-
 <section id="gallery" class="gallery section">
 
     <div class="section-header">
@@ -1862,7 +1839,7 @@ decoding="async">
 
     </div>
 
-    <div class="gallery-grid">
+    <div class="gallery-grid" id="galleryGrid">
 
         <!-- Gallery Item 1 -->
 
@@ -1870,17 +1847,14 @@ decoding="async">
 
             <img
                 src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80"
-                alt="Healthcare Camp">
+                alt="Healthcare Camp"
+                loading="lazy">
 
             <div class="gallery-overlay">
 
-                <h3>
-                    Healthcare Camp
-                </h3>
+                <h3>Healthcare Camp</h3>
 
-                <p>
-                    Community Medical Support
-                </p>
+                <p>Community Medical Support</p>
 
             </div>
 
@@ -1892,17 +1866,14 @@ decoding="async">
 
             <img
                 src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80"
-                alt="Medical Team">
+                alt="Medical Team"
+                loading="lazy">
 
             <div class="gallery-overlay">
 
-                <h3>
-                    Medical Team
-                </h3>
+                <h3>Medical Team</h3>
 
-                <p>
-                    Dedicated Healthcare Professionals
-                </p>
+                <p>Dedicated Healthcare Professionals</p>
 
             </div>
 
@@ -1914,17 +1885,14 @@ decoding="async">
 
             <img
                 src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=900&q=80"
-                alt="Health Awareness">
+                alt="Health Awareness"
+                loading="lazy">
 
             <div class="gallery-overlay">
 
-                <h3>
-                    Awareness Program
-                </h3>
+                <h3>Awareness Program</h3>
 
-                <p>
-                    Educating Communities
-                </p>
+                <p>Educating Communities</p>
 
             </div>
 
@@ -1936,17 +1904,14 @@ decoding="async">
 
             <img
                 src="assets/telemedicine.jpg"
-                alt="Telemedicine">
+                alt="Telemedicine"
+                loading="lazy">
 
             <div class="gallery-overlay">
 
-                <h3>
-                    Telemedicine
-                </h3>
+                <h3>Telemedicine</h3>
 
-                <p>
-                    Digital Healthcare Support
-                </p>
+                <p>Digital Healthcare Support</p>
 
             </div>
 
@@ -1957,17 +1922,15 @@ decoding="async">
         <div class="gallery-item">
 
             <img
-                src="assets/ruralhealth.jpg">
+                src="assets/ruralhealth.jpg"
+                alt="Rural Healthcare"
+                loading="lazy">
 
             <div class="gallery-overlay">
 
-                <h3>
-                    Rural Outreach
-                </h3>
+                <h3>Rural Outreach</h3>
 
-                <p>
-                    Healthcare Beyond Cities
-                </p>
+                <p>Healthcare Beyond Cities</p>
 
             </div>
 
@@ -1979,17 +1942,14 @@ decoding="async">
 
             <img
                 src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=900&q=80"
-                alt="Community Support">
+                alt="Community Support"
+                loading="lazy">
 
             <div class="gallery-overlay">
 
-                <h3>
-                    Community Support
-                </h3>
+                <h3>Community Support</h3>
 
-                <p>
-                    Together For Better Health
-                </p>
+                <p>Together For Better Health</p>
 
             </div>
 
@@ -2001,17 +1961,14 @@ decoding="async">
 
             <img
                 src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=900&q=80"
-                alt="Health Camp">
+                alt="Health Screening"
+                loading="lazy">
 
             <div class="gallery-overlay">
 
-                <h3>
-                    Health Screening
-                </h3>
+                <h3>Health Screening</h3>
 
-                <p>
-                    Preventive Healthcare
-                </p>
+                <p>Preventive Healthcare</p>
 
             </div>
 
@@ -2024,26 +1981,479 @@ decoding="async">
             <img
                 src="https://images.unsplash.com/photo-1580281657527-47f249e8f4df?auto=format&fit=crop&w=900&q=80"
                 alt="Healthcare NGO providing medical services in Uttar Pradesh"
-fetchpriority="high"
-decoding="async">
+                loading="lazy">
 
             <div class="gallery-overlay">
 
-                <h3>
-                    Social Impact
-                </h3>
+                <h3>Social Impact</h3>
 
-                <p>
-                    Improving Lives Daily
-                </p>
+                <p>Improving Lives Daily</p>
 
             </div>
 
         </div>
 
+        <!-- Gallery Item 9 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img9.jpeg"
+                alt="Zoonie Gallery Image 9"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 10 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img10.jpeg"
+                alt="Zoonie Gallery Image 10"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 11 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img11.jpeg"
+                alt="Zoonie Gallery Image 11"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 12 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img12.jpeg"
+                alt="Zoonie Gallery Image 12"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 13 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img13.jpeg"
+                alt="Zoonie Gallery Image 13"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 14 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img14.jpeg"
+                alt="Zoonie Gallery Image 14"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 15 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img15.jpeg"
+                alt="Zoonie Gallery Image 15"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 16 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img16.jpeg"
+                alt="Zoonie Gallery Image 16"
+                loading="lazy">
+
+        </div>
+                <!-- Gallery Item 17 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img17.jpeg"
+                alt="Zoonie Gallery Image 17"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 18 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img18.jpeg"
+                alt="Zoonie Gallery Image 18"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 19 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img19.jpeg"
+                alt="Zoonie Gallery Image 19"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 20 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img20.jpeg"
+                alt="Zoonie Gallery Image 20"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 21 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img21.jpeg"
+                alt="Zoonie Gallery Image 21"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 22 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img22.jpeg"
+                alt="Zoonie Gallery Image 22"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 23 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img23.jpeg"
+                alt="Zoonie Gallery Image 23"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 24 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img24.jpeg"
+                alt="Zoonie Gallery Image 24"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 25 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img25.jpeg"
+                alt="Zoonie Gallery Image 25"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 26 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img26.jpeg"
+                alt="Zoonie Gallery Image 26"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 27 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img27.jpeg"
+                alt="Zoonie Gallery Image 27"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 28 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img28.jpeg"
+                alt="Zoonie Gallery Image 28"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 29 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img29.jpeg"
+                alt="Zoonie Gallery Image 29"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 30 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img30.jpeg"
+                alt="Zoonie Gallery Image 30"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 31 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img31.jpeg"
+                alt="Zoonie Gallery Image 31"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 32 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img32.jpeg"
+                alt="Zoonie Gallery Image 32"
+                loading="lazy">
+
+        </div>
+                <!-- Gallery Item 33 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img33.jpeg"
+                alt="Zoonie Gallery Image 33"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 34 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img34.jpeg"
+                alt="Zoonie Gallery Image 34"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 35 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img35.jpeg"
+                alt="Zoonie Gallery Image 35"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 36 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img36.jpeg"
+                alt="Zoonie Gallery Image 36"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 37 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img37.jpeg"
+                alt="Zoonie Gallery Image 37"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 38 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img38.jpeg"
+                alt="Zoonie Gallery Image 38"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 39 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img39.jpeg"
+                alt="Zoonie Gallery Image 39"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 40 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img40.jpeg"
+                alt="Zoonie Gallery Image 40"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 41 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img41.jpeg"
+                alt="Zoonie Gallery Image 41"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 42 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img42.jpeg"
+                alt="Zoonie Gallery Image 42"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 43 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img43.jpeg"
+                alt="Zoonie Gallery Image 43"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 44 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img44.jpeg"
+                alt="Zoonie Gallery Image 44"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 45 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img45.jpeg"
+                alt="Zoonie Gallery Image 45"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 46 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img46.jpeg"
+                alt="Zoonie Gallery Image 46"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 47 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img47.jpeg"
+                alt="Zoonie Gallery Image 47"
+                loading="lazy">
+
+        </div>
+
+        <!-- Gallery Item 48 -->
+
+        <div class="gallery-item hidden-gallery">
+
+            <img
+                src="assets/img48.jpeg"
+                alt="Zoonie Gallery Image 48"
+                loading="lazy">
+
+        </div>
+                <!-- Gallery Item 49 -->
+
+    
+
+   
+
+    </div>
+
+    <!-- Load More Button -->
+
+    <div class="gallery-load-more">
+
+        <button
+            id="loadMoreGallery"
+            class="btn primary-btn">
+
+            View More Photos
+
+        </button>
+
     </div>
 
 </section>
+
 <section class="video-gallery">
 
     <div class="section-header">
@@ -2088,8 +2498,32 @@ decoding="async">
             </iframe>
 
         </div>
+         <div class="video-card">
+
+           <iframe
+        src="https://www.youtube.com/embed/DIraMUluzIU"
+        title="Zoonie Healthcare Short"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+
+        </div>
 
     </div>
+    <div class="more-video-btn">
+
+    <a
+        href="https://youtube.com/@zooniehealthcare"
+        target="_blank"
+        class="btn primary-btn">
+
+        <i class="fab fa-youtube"></i>
+        Watch More Videos
+
+    </a>
+
+</div>
 
 </section>
 <!-- ==================================
@@ -2907,7 +3341,18 @@ decoding="async">
 
             </a>
 
-            
+                      <a
+        href="https://wa.me/918001454303"
+        target="_blank" rel="noopener noreferrer"
+    >
+        <i class="fab fa-whatsapp"></i>
+    </a>
+                  <a
+        href="https://youtube.com/@zooniehealthcare"
+        target="_blank" rel="noopener noreferrer"
+    >
+        <i class="fab fa-youtube"></i>
+    </a>
 
            
 
@@ -2933,7 +3378,8 @@ decoding="async">
             </h3>
 
             <p>
-               Zoonie is a healthcare-focused NPO (Non Profit Organization) dedicated to empowering communities through healthcare awareness, preventive care programs, telemedicine support, emergency assistance, and accessible healthcare solutions across Uttar Pradesh.
+               Zoonie is A Cloud Platform which has been established by Om Shri Siddhi Vinayak Foundation Prayagraj Uttar Pradesh. It is a noble & humble project dedicated to humanity. It is a Trademark registered. Zoonie was launched two years back in 2024 under the supervision, guidance and financial support by Om Shri Siddhi Vinayak Foundation, Prayagraj. The Trust was registered on 14/09/2010 at Prayagraj. Since 2010 the trust is providing its services to the society. Especially to the poor and middle class. The above Trust has Tax Examption Certificates, CSR Certificate, LEI Certificate, ISO Certificate and many more. 
+       The motto behind the establishment of Zoonie is to bring down the high cost of treatment and make it relevant for a common man and to eliminate the middle man/brokers from the hospital industry.
 
             </p>
 
