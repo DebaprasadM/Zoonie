@@ -5642,6 +5642,16 @@ textarea:focus {
   transform: translateY(-3px);
 }
 
+.docs-jump a.active {
+  background: var(--gradient);
+
+  color: #fff;
+}
+
+.doc-card.hide {
+  display: none;
+}
+
 .doc-card {
   background: #fff;
 
@@ -5756,6 +5766,10 @@ textarea:focus {
   transform: translateY(-4px);
 }
 
+.doc-mobile-fallback {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .doc-card {
     padding: 24px 18px;
@@ -5767,5 +5781,47 @@ textarea:focus {
 
   .doc-preview-grid {
     grid-template-columns: 1fr;
+  }
+
+  .doc-preview:has(iframe) {
+    display: none;
+  }
+
+  .doc-mobile-fallback {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: #f4f7fb;
+
+    border: 1px solid #e6edf5;
+
+    border-radius: 16px;
+
+    padding: 18px;
+  }
+
+  .doc-mobile-fallback i {
+    font-size: 2rem;
+
+    color: #d93025;
+
+    flex-shrink: 0;
+  }
+
+  .doc-mobile-fallback strong {
+    display: block;
+
+    font-size: 0.95rem;
+
+    word-break: break-word;
+  }
+
+  .doc-mobile-fallback span {
+    font-size: 0.82rem;
+
+    color: var(--text-light);
   }
 }

@@ -95,6 +95,46 @@ function initSubmenu() {
 
 document.addEventListener("componentsLoaded", initSubmenu);
 
+function initDocFilter() {
+  const jumpBox = document.querySelector(".docs-jump");
+  if (!jumpBox) return;
+  const chips = jumpBox.querySelectorAll("a[data-target]");
+  const cards = document.querySelectorAll(".doc-card");
+  if (!chips.length || !cards.length) return;
+
+  function applyFilter(target, updateHash) {
+    chips.forEach((c) => c.classList.toggle("active", c.dataset.target === target));
+    cards.forEach((card) => card.classList.toggle("hide", target !== "all" && card.id !== target));
+    if (updateHash) {
+      if (target === "all") {
+        history.replaceState(null, "", location.pathname);
+      } else {
+        history.replaceState(null, "", "#" + target);
+      }
+      setActiveNav();
+    }
+  }
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", (e) => {
+      e.preventDefault();
+      applyFilter(chip.dataset.target, true);
+      document.getElementById("documents")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  function filterFromHash() {
+    const id = location.hash.replace("#", "");
+    const valid = Array.from(cards).some((card) => card.id === id);
+    applyFilter(valid ? id : "all", false);
+  }
+
+  filterFromHash();
+  window.addEventListener("hashchange", filterFromHash);
+}
+
+initDocFilter();
+
 const counters = document.querySelectorAll(".counter");
 let counterStarted = false;
 
