@@ -607,6 +607,100 @@ background: linear-gradient(
 }
 
 /* =======================================================
+   SIDEBAR SUBMENU (Documents)
+======================================================= */
+
+.submenu-toggle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  padding: 14px 18px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font: inherit;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.submenu-toggle > i:first-child {
+  width: 22px;
+
+  font-size: 1rem;
+
+  color: var(--primary);
+}
+
+.submenu-toggle span {
+  flex: 1;
+
+  text-align: left;
+}
+
+.submenu-chevron {
+  font-size: 0.75rem;
+
+  color: var(--primary);
+
+  transition: transform 0.3s ease;
+}
+
+.submenu-toggle:hover {
+  background: rgba(15, 76, 129, 0.08);
+
+  color: var(--primary);
+}
+
+.has-submenu.open .submenu-chevron {
+  transform: rotate(180deg);
+}
+
+.has-submenu.open .submenu-toggle {
+  background: rgba(15, 76, 129, 0.08);
+
+  color: var(--primary);
+}
+
+.submenu {
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition: max-height 0.4s ease;
+}
+
+.has-submenu.open .submenu {
+  max-height: 800px;
+}
+
+.submenu li a {
+  padding: 11px 18px 11px 52px !important;
+
+  font-size: 0.92rem;
+}
+
+.submenu li a i {
+  width: 18px !important;
+
+  font-size: 0.85rem !important;
+}
+
+/* =======================================================
    DONATE BUTTON
 ======================================================= */
 
@@ -5506,4 +5600,172 @@ textarea:focus {
 
 .more-video-btn i{
     font-size:20px;
+}
+
+/* =======================================================
+   DOCUMENTS PAGE
+======================================================= */
+
+.docs-jump {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  justify-content: center;
+
+  margin: 40px 0 20px;
+}
+
+.docs-jump a {
+  padding: 10px 20px;
+
+  border-radius: 50px;
+
+  background: #f4f7fb;
+
+  color: var(--primary);
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  transition: var(--transition);
+}
+
+.docs-jump a:hover {
+  background: var(--gradient);
+
+  color: #fff;
+
+  transform: translateY(-3px);
+}
+
+.doc-card {
+  background: #fff;
+
+  border-radius: 22px;
+
+  box-shadow: var(--shadow-md);
+
+  padding: 35px;
+
+  margin: 40px auto;
+
+  max-width: 900px;
+
+  scroll-margin-top: 30px;
+}
+
+.doc-card h2 {
+  color: var(--primary);
+
+  margin-bottom: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.doc-card h2 i {
+  font-size: 1.4rem;
+}
+
+.doc-card > p {
+  color: var(--text-light);
+
+  margin-bottom: 22px;
+}
+
+.doc-preview {
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  border: 1px solid #e6edf5;
+
+  background: #f4f7fb;
+}
+
+.doc-preview iframe {
+  display: block;
+
+  width: 100%;
+
+  height: 520px;
+
+  border: none;
+}
+
+.doc-preview img {
+  display: block;
+
+  width: 100%;
+
+  max-height: 560px;
+
+  object-fit: contain;
+
+  background: #fff;
+}
+
+.doc-preview-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+.doc-preview-grid img {
+  border-radius: 12px;
+}
+
+.doc-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 22px;
+}
+
+.doc-actions .btn {
+  padding: 13px 28px;
+
+  font-size: 0.95rem;
+}
+
+.doc-btn-outline {
+  border: 2px solid var(--primary);
+
+  color: var(--primary);
+
+  background: transparent;
+}
+
+.doc-btn-outline:hover {
+  background: var(--primary);
+
+  color: #fff;
+
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .doc-card {
+    padding: 24px 18px;
+  }
+
+  .doc-preview iframe {
+    height: 380px;
+  }
+
+  .doc-preview-grid {
+    grid-template-columns: 1fr;
+  }
 }

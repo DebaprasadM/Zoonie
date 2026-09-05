@@ -37,4 +37,10 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <url>
+    <loc>https://www.zooniecare.co.in/documents.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>

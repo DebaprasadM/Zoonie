@@ -73,6 +73,28 @@ document.addEventListener("componentsLoaded", setActiveNav);
 window.addEventListener("load", setActiveNav);
 window.addEventListener("hashchange", setActiveNav);
 
+function initSubmenu() {
+  const toggles = document.querySelectorAll(".submenu-toggle");
+  if (!toggles.length) return;
+  toggles.forEach((toggle) => {
+    const parent = toggle.closest(".has-submenu");
+    if (!parent) return;
+    toggle.addEventListener("click", () => {
+      const isOpen = parent.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  });
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  if (currentPath === "documents.html") {
+    document.querySelectorAll(".has-submenu").forEach((parent) => {
+      parent.classList.add("open");
+      parent.querySelector(".submenu-toggle")?.setAttribute("aria-expanded", "true");
+    });
+  }
+}
+
+document.addEventListener("componentsLoaded", initSubmenu);
+
 const counters = document.querySelectorAll(".counter");
 let counterStarted = false;
 
